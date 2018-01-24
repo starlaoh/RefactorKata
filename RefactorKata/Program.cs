@@ -22,12 +22,14 @@ namespace RefactorKata
                 var prod = new Product { name = reader["Name"].ToString() };
                 products.Add(prod);
             }
+
             conn.Dispose();
-            Console.WriteLine("Products Loaded!");
-            for (int i =0; i< products.Count; i++)
+
+            foreach(var product in products)
             {
-                Console.WriteLine(products[i].name);
+                Console.WriteLine(product.name);
             }
+
         }
     }
     public class Product
