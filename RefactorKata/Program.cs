@@ -10,12 +10,10 @@ namespace RefactorKata
         {
             var conn = new SqlConnection("Server=.;Database=myDataBase;User Id=myUsername;Password = myPassword;");
 
-            System.Data.SqlClient.SqlCommand cmd = conn.CreateCommand();
+            var cmd = conn.CreateCommand();
             cmd.CommandText = "select * from Products";
-            /*
-             * cmd.CommandText = "Select * from Invoices";
-             */
-            System.Data.SqlClient.SqlDataReader reader = cmd.ExecuteReader();
+           
+            var reader = cmd.ExecuteReader();
             List<Product> products = new List<Product>();
 
             //TODO: Replace with Dapper
