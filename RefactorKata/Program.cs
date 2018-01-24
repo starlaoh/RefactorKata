@@ -8,7 +8,7 @@ namespace RefactorKata
     {
         static void Main(string[] args)
         {
-            SqlConnection conn = new SqlConnection("Server=.;Database=myDataBase;User Id=myUsername;Password = myPassword;");
+            var conn = new SqlConnection("Server=.;Database=myDataBase;User Id=myUsername;Password = myPassword;");
 
             System.Data.SqlClient.SqlCommand cmd = conn.CreateCommand();
             cmd.CommandText = "select * from Products";
