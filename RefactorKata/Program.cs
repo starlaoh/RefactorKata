@@ -23,9 +23,6 @@ namespace RefactorKata
                 {
                     products.Add(new Product { Name = reader["Name"].ToString() });
                 }
-
-                conn.Dispose();
-
                 foreach (var product in products)
                 {
                     Console.WriteLine(product.Name);
